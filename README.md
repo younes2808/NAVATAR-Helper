@@ -1,53 +1,68 @@
 # NAVATAR-Helper
-## - health chatbot based on RAG framework
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red)](https://streamlit.io/)
+
+NAVATAR-Helper is an AI-driven chatbot developed to assist with health-related NEET (Not in Education, Employment, or Training) queries. It leverages the **Retrieval-Augmented Generation (RAG)** framework to provide accurate, bilingual answers in **Norwegian** and **English** based on verified sources, while minimizing hallucinations.
 
 ## Overview
-The NAVATAR-Helper is a healthcare-focused chatbot developed using a Retrieval-Augmented Generation (RAG) framework. It answers NEET (Not in Education, Employment, or Training)-related questions in both Norwegian and English, ensuring responses are reliable and sourced.
+
+- **Project Goal**: Develop a fully working MVP of a RAG-based chatbot that delivers accurate, sourced & verified answers to NEET-related queries while minimizing hallucinations. 
+- **Technology Stack**:
+  - **Backend**: Python, LangChain, custom LLMs.
+  - **Frontend**: Streamlit for user interface.
+  - **Embedding Model**: `Alibaba-NLP/gte-multilingual-base` for question vectorization.
+  - **Vector Database**: Milvus for storing and retrieving vectorized data.
+  - **LLM**: `norallm/normistral-7b-warm-instruct` for generating responses.
+  - **GPU Server**: Nvidia GeForce GTX 1080 Ti (11GB VRAM).
 
 ## Key Features
-- **Bilingual Support**: Responds in Norwegian and English.
-- **NEET-Specific Domain**: Provides responses limited to NEET topics.
-- **Minimized Hallucinations**: Reduces incorrect outputs using strict source-based data retrieval.
+- **RAG Framework**: Integrates retrieval and generation for precise answers.
+- **Bilingual Support**: Handles both Norwegian and English queries.
+- **Source Attribution**: Provides references for each response.
+- **Reduced Hallucinations**: Strict use of retrieved, relevant data ensures factual outputs.
+- **Extensive Testing**: Both RAG and non-RAG approaches for performance comparison
 
-## Technical Specifications
-- **Embedding Models**: `Alibaba-NLP/gte-multilingual-base`
-- **Vector Databases**: `Milvus Lite`
-- **LLM Used**: `NorMistral-7B-warm-instruct`.
-- **Frameworks and Libraries**:
-  - **LangChain** for chaining components.
-  - **Streamlit** for the user interface.
+## Architecture
 
-## Installation and Setup
+1. **User Input**: Processes user questions via a Streamlit-based frontend.
+2. **Language Detection**: Determines the input language (Norwegian or English).
+3. **Embedding**: Converts questions into vectors using `Alibaba-NLP/gte-multilingual-base`.
+4. **Context Retrieval**: Utilizes Milvus to find relevant document chunks.
+5. **Response Generation**: Uses `norallm/normistral-7b-warm-instruct` to produce context-informed answers.
+6. **Attribution**: Displays sources for user verification.
+
+## Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/sirin-koca/NAVATAR-Helper.git
    cd NAVATAR-Helper
 
-## Project Overview 
-- Handle health-related queries focusing on the NEET domain.
-- Provide accurate, verifiable answers based on the provided dataset (PDF files).
-- Minimize hallucinations by limiting answers to only content found in the NEET dataset.
-- Support both English and Norwegian language queries, responding in the language of the question.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
 
-This project uses **Streamlit** for the frontend, and **LangChain**, **Milvus**, and **Huggingface models** for the backend, including embedding models to vectorize the PDF content.
+3. Run NAVATAR-Helper:
+   ```bash
+   streamlit run app.py
 
-## Features
-
-- Multilingual Support (English and Norwegian)
-- Retrieval-Augmented Generation (RAG) for accurate query responses
-- Simple and intuitive UI built with Streamlit
-- Tested with both RAG and non-RAG approaches for performance comparison
-- Low hallucination rate by limiting responses to NEET-related data
+### Backend scripts:
+* popDB.py: Prepares the vector database with embeddings.
+* setupLLM.py: Initializes the LLM for use.
+* ragMain.py: Main interaction handler for user queries.
 
 ### Prerequisites
 - Python 3.8 or higher
 - PyCharm or any Python IDE
 - A virtual environment for dependency management
+- Access to a GPU server (e.g., Nvidia GeForce GTX 1080 Ti or higher)
 - Git for version control
+
+### Team Members: Sirin, Younes, Rafael, Morten, Valerie
 
 ---
 
-OsloMet H2024 | Group Project
+ATA3750 Applied AI & Data Science | Group Project | OsloMet H2024 ©
 
 
 
