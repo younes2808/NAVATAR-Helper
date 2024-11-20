@@ -62,7 +62,9 @@ NAVATAR-Helper is an AI-driven chatbot developed to assist with health-related N
 
 ---
 
-ATA3750 Applied AI & Data Science | Group Project | OsloMet H2024 ©
+DATA3750 Applied AI & Data Science | Group Project | OsloMet H2024 ©
+
+---
 
 
 
