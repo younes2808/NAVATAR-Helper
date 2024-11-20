@@ -1,0 +1,15 @@
+# Instruksjoner for å kjøre requirements.txt:
+# 1. Opprett et virtuelt miljø i NAVATAR-Helper mappen:
+#    python3 -m venv venv
+#
+# 2. Aktiver det virtuelle miljøet:
+#    source venv/bin/activate  (på Linux/macOS)
+#    venv\Scripts\activate     (på Windows)
+#
+# 3. Installer avhengigheter:
+#    pip install -r requirements.txt
+#
+# NB!!!
+# Husk å være i det virtuelle miljøet for å bruke prosjektet.
+# Du kan deaktivere det virtuelle miljøet med kommandoen:
+#    deactivate
