@@ -1,15 +1,34 @@
-# Instruksjoner for å kjøre requirements.txt:
-# 1. Opprett et virtuelt miljø i NAVATAR-Helper mappen:
-#    python3 -m venv venv
-#
-# 2. Aktiver det virtuelle miljøet:
-#    source venv/bin/activate  (på Linux/macOS)
-#    venv\Scripts\activate     (på Windows)
-#
-# 3. Installer avhengigheter:
-#    pip install -r requirements.txt
-#
-# NB!!!
-# Husk å være i det virtuelle miljøet for å bruke prosjektet.
-# Du kan deaktivere det virtuelle miljøet med kommandoen:
-#    deactivate
+# Setup:
+1. Create virtual env: python3 -m venv venv
+2. Activate:
+   - Linux/macOS: source venv/bin/activate
+   - Windows: `venv\Scripts\activate`
+3. Install deps: pip install -r requirements.txt
+
+# Run Services:
+- HTTP Server: python3 -m http.server 8503 (in Server folder)
+- Client: streamlit run Client.py --server.port 8080 (in Client folder)
+- Backend: python3 Server.py (in Server folder)
+
+# Access:
+- Open: rag2.cs.oslomet.no (requires OsloMet network)
+- Ensure all 3 services run simultaneously.
+
+######################
+
+# Oppsett:
+1. Opprett virtuelt miljø: python3 -m venv venv
+2. Aktiver:
+   - Linux/macOS: source venv/bin/activate
+   - Windows: venv\Scripts\activate
+3. Installer avhengigheter: pip install -r requirements.txt
+
+# Kjør Tjenester:
+- HTTP-server: python3 -m http.server 8503 (i Server-mappen)
+- Klient: streamlit run Client.py --server.port 8080 (i Client-mappen)
+- Backend: python3 Server.py (i Server-mappen)
+
+# Tilgang:
+- Åpne: rag2.cs.oslomet.no (krever OsloMet-nettverk)
+- Alle 3 tjenester må kjøre samtidig.
+
