@@ -35,19 +35,27 @@ NAVATAR-Helper is an AI-driven chatbot developed to assist with health-related N
 5. **Response Generation**: Uses `norallm/normistral-7b-warm-instruct` to produce context-informed answers.
 6. **Attribution**: Displays sources for user verification.
 
-## Installation
-1. Clone the repository:
+## Installation & Setup:
+* Clone the repository:
    ```bash
    git clone https://github.com/sirin-koca/NAVATAR-Helper.git
    cd NAVATAR-Helper
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+1. Create virtual env: `python3 -m venv venv`
+2. Activate:
+   - Linux/macOS: `source venv/bin/activate`
+   - Windows: `venv\Scripts\activate`
+3. Install deps: `pip install -r requirements.txt`
 
-3. Run NAVATAR-Helper:
-   ```bash
-   streamlit run app.py
+4. Run Services:
+  - HTTP Server: `python3 -m http.server 8503` (in Server folder)
+  - Client: `streamlit run Client.py --server.port 8080` (in Client folder)
+  - Backend: `python3 Server.py` (in Server folder)
+
+5. Access:
+  - Open: `rag2.cs.oslomet.no` (requires OsloMet network)
+  - Ensure all 3 services run simultaneously.
+
 
 ### Backend scripts:
 * popDB.py: Prepares the vector database with embeddings.
