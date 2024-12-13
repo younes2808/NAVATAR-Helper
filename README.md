@@ -5,7 +5,7 @@
 [![LangChain](https://img.shields.io/badge/Library-LangChain-yellow)](https://python.langchain.com/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 
-## Grade: A
+
 NAVATAR-Helper is an AI-driven chatbot developed to assist with health-related NEET (Not in Education, Employment, or Training) queries. It leverages the **Retrieval-Augmented Generation (RAG)** framework to provide accurate, bilingual answers in **Norwegian** and **English** based on verified sources, while minimizing hallucinations.
 
 ## Overview
@@ -68,7 +68,9 @@ NAVATAR-Helper is an AI-driven chatbot developed to assist with health-related N
 - A virtual environment for dependency management
 - Access to a GPU server (e.g., Nvidia GeForce GTX 1080 Ti or higher)
 - Git for version control
-
+---
+### Grade: A
+---
 ### Team Members: Sirin, Rafey, Younes, Morten, Valerie
 
 ---
