@@ -68,9 +68,9 @@ NAVATAR-Helper is an AI-driven chatbot developed to assist with health-related N
 - A virtual environment for dependency management
 - Access to a GPU server (e.g., Nvidia GeForce GTX 1080 Ti or higher)
 - Git for version control
----
+
 ### Grade: A
----
+
 ### Team Members: Sirin, Rafey, Younes, Morten, Valerie
 
 ---
